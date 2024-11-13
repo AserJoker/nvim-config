@@ -35,7 +35,7 @@ local function setup()
       -- 出现补全
       ['<A-.>'] = cmp.mapping(cmp.mapping.complete(), { 'i', 'c' }),
       -- 取消
-      ['<Esc>'] = cmp.mapping({
+      ['<A-,>'] = cmp.mapping({
         i = cmp.mapping.abort(),
         c = cmp.mapping.close(),
       }),

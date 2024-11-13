@@ -21,7 +21,6 @@ local function setup()
   vim.o.termguicolors = true;
   vim.o.signcolumn = "yes"
 
-  vim.keymap.set("i", "jk", "<ESC>")
   vim.keymap.set("n", "<leader>sv", "<C-w>v")
   vim.keymap.set("n", "<leader>sh", "<C-w>s")
   vim.keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>")
@@ -33,6 +32,10 @@ local function setup()
   vim.keymap.set("n", "<C-k>", "<C-w><Up>")
   vim.keymap.set("n", "<C-j>", "<C-w><Down>")
   vim.keymap.set("n", "<leader>fmt", ":normal gg=G<CR>")
+
+  vim.keymap.set("n", "<leader>bn", ":bn<CR>")
+  vim.keymap.set("n", "<leader>bp", ":bp<CR>")
+  vim.keymap.set("n", "<leader>bd", ":bd|sp|bn|bd<CR>")
 
   vim.api.nvim_create_autocmd("BufWritePre", {
     command = "lua vim.lsp.buf.format()"
