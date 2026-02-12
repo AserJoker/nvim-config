@@ -4,5 +4,8 @@ local function setup()
     pip = {
     }
   })
+  require 'mason-lspconfig'.setup({
+    ensure_installed = { 'lua_ls' }
+  })
 end
 return { setup = setup }
